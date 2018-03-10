@@ -4,14 +4,13 @@
 		<meta charset = "utf-8"/>
 		<title>GYRO</title>
 		<script>
-			window.document.addEventListener("deviceorientation",function(event){
+			window.addEventListener('deviceorientation',function(event){
 				var alpha = event.alpha;
 				var beta = event.beta;
 				var gamma = event.gamma;
 
-				var result = document.getElementById("result");
-				result.innerHTML = alpha;
-			},false);
+				result.innerHTML = "Alpha" + Math.round(alpha * 10)/10 + "<br>";
+			},true);
 		</script>
 	</head>
 	<body>
