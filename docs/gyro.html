@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8"/>
+		<title>GYRO</title>
+		<script>
+			window.document.addEventListener("deviceorientaion",function(event){
+				var alpha = event.alpha;
+				var beta = event.beta;
+				var gamma = event.gamma;
+
+				var result = document.getElementById("result");
+				result.innerHTML = alpha;
+			},false);
+		</script>
+	</head>
+	<body>
+		<div id = "result" ></div>
+	</body>
+</html>
